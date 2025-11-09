@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    margin: 20px;
+    color: rgb(71, 117, 71);
+    background-color: lime;
+    outline: rgb(71, 117, 71);
+    width: 223px;
+    height: 75px;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#syriaFlag {
+    background-image: url(assets/sy.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 223px;
+    height: 152px;
+}
+
+#flagTitleSyria {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 1em;
+    position: relative;
+    top: 43%;
+    left: 24%;
+}
+
+#flagTitleEdition {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 1em;
+    position: relative;
+    top: 43%;
+    left: 36%;
+}
+
+#spacer {
+    height: 30vh;
+}
+
+#syriaButton {
+    width: 223px;
+    height: 40px;
+}
+
+#syriaMap {
+    width: 490px;
+    height: 416px;
+}
