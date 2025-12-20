@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../dist/bundle.js" defer></script>
+    <script>
+        window.onload = function() {
+            window.game = new SyriaSyria.BorderingGame();
+        }
+    </script>
+</head>
+
+<body class="centered">
+    <h1>what countries does Syria border?</h1>
+    <div id="answerContainer"></div>
+    <button onclick="game.onUpPressed()">🔺</button>
+    <input type="text" id="answerCountInput" onchange="game.onAnswerCountChanged()"/>
+    <button onclick="game.onDownPressed()">🔻</button>
+    <button onclick="game.onSubmit()">submit</button>
+</body>
+
+</html>

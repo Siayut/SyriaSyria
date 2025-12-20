@@ -1,0 +1,25 @@
+{
+  "name": "syria-syria",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run build",
+    "build": "node esbuild.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ChrisAlight/SyriaSyria.git"
+  },
+  "author": "Ollie Light",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisAlight/SyriaSyria/issues"
+  },
+  "homepage": "https://github.com/ChrisAlight/SyriaSyria#readme",
+  "description": "",
+  "devDependencies": {
+    "esbuild": "^0.26.0",
+    "typescript": "^5.9.3"
+  }
+}
