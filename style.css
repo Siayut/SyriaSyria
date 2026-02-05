@@ -23,6 +23,12 @@ button {
     min-height: 100%;
 }
 
+.error-text {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 #syriaFlag {
     background-image: url(assets/sy.webp);
     background-repeat: no-repeat;
@@ -88,4 +94,23 @@ button {
     left: 50%;
     transform: translateX(-50%);
     margin: 0 0 20px 0;
+}
+
+#ortext {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#capital-select {
+    position: relative;
+    left: -230px;
+    top: 9px;
+}
+
+#capital-input {
+    position: relative;
+    top: -13px;
+    left: 200px;
 }

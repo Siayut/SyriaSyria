@@ -19,10 +19,11 @@ var SyriaSyria = (() => {
   var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
   var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
 
-  // scripts/index.ts
+  // src/index.ts
   var index_exports = {};
   __export(index_exports, {
-    BorderingGame: () => BorderingGame
+    BorderingGame: () => BorderingGame,
+    CapitalGame: () => CapitalGame
   });
 
   // util/UiUtil.ts
@@ -123,6 +124,34 @@ var SyriaSyria = (() => {
     "lebanon"
   ]);
   var BorderingGame = _BorderingGame;
+
+  // games/capitalGame.ts
+  var _CapitalGame = class _CapitalGame {
+    onAnswerChange() {
+      const errorDiv = document.getElementById("error-text");
+      errorDiv.textContent = "";
+    }
+    onSubmit() {
+      const answerSelectElement = document.getElementById("capital-select");
+      const selectValue = answerSelectElement.value.trim().toLowerCase();
+      const answerInputElement = document.getElementById("capital-input");
+      const inputValue = answerInputElement.value.trim().toLowerCase();
+      if (selectValue && inputValue) {
+        const errorDiv = document.getElementById("error-text");
+        errorDiv.textContent = "Please answer using either the dropdown or the text input, not both.";
+        return;
+      }
+      const finalAnswer = selectValue || inputValue;
+      const popup = UiUtil.createResultPopup(
+        finalAnswer === _CapitalGame.CORRECT_ANSWER ? "Correct!" : "Incorrect!",
+        "Continue",
+        () => document.location.href = "../index.html"
+      );
+      document.body.appendChild(popup);
+    }
+  };
+  __publicField(_CapitalGame, "CORRECT_ANSWER", "damascus");
+  var CapitalGame = _CapitalGame;
   return __toCommonJS(index_exports);
 })();
 //# sourceMappingURL=bundle.js.map

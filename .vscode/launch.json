@@ -5,12 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "chrome",
+            "type": "firefox",
             "request": "launch",
-            "name": "Build and Run",
+            "reAttach": true,
             "preLaunchTask": "npm: start",
-            "url": "file:///C:/Users/cajoh/Documents/New%20Documents/SyriaSyria/index.html",
-            "webRoot": "${workspaceFolder}"
+            "name": "Build and Run",
+            "file": "${workspaceFolder}/index.html",
+            "tmpDir": "~/tmp"
         }
     ]
 }

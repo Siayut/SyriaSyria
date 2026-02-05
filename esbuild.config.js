@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Build configuration: single bundle entry that exposes globals for legacy HTML
-const entry = path.resolve(__dirname, 'scripts', 'index.ts');
+const entry = path.resolve(__dirname, 'src', 'index.ts');
 const outFile = path.resolve(__dirname, 'dist', 'bundle.js');
 const outDir = path.dirname(outFile);
 if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
