@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="manifest" href="manifest.json">
+
+    <script>
+        function startGame() {
+            var games = [
+                'games/borderingGame.html',
+                'games/capitalGame.html'
+            ];
+            window.location.href = games[Math.floor(Math.random() * games.length)];
+        }
+    </script>
 </head>
 
 <body>
@@ -13,7 +23,7 @@
         <h2>solves every problem</h2>
         <h3 id="syriaFlag"><span id="flagTitleSyria">Syria</span><span id="flagTitleEdition">Editon</span></h3>
         <button  id="syriaButton" onclick="window.location.href='syria.html'">EXTRA SYRIA!!!!</button>
-        <button onclick="window.location.href='games/borderingGame.html'">start game</button>
+        <button onclick="startGame()">start game</button>
         <button id="syriaMapButton" onclick="window.location.href='theSyria.html'">the Syria</button>
         <div id="spacer"></div>
     </div>
