@@ -23,7 +23,8 @@ var SyriaSyria = (() => {
   var index_exports = {};
   __export(index_exports, {
     BorderingGame: () => BorderingGame,
-    CapitalGame: () => CapitalGame
+    CapitalGame: () => CapitalGame,
+    MountainGame: () => MountainGame
   });
 
   // util/UiUtil.ts
@@ -152,6 +153,37 @@ var SyriaSyria = (() => {
   };
   __publicField(_CapitalGame, "CORRECT_ANSWER", "damascus");
   var CapitalGame = _CapitalGame;
+
+  // games/mountainGame.ts
+  var _MountainGame = class _MountainGame {
+    onSubmit() {
+      const highestInputElement = document.getElementById("highest-input");
+      const lowestInputElement = document.getElementById("lowest-input");
+      const highestAnswer = highestInputElement.value.trim().toLowerCase();
+      const lowestAnswer = lowestInputElement.value.trim().toLowerCase();
+      const isHighestCorrect = highestAnswer === _MountainGame.HIGHEST_MOUNTAIN.toLowerCase();
+      const isLowestCorrect = lowestAnswer === _MountainGame.LOWEST_MOUNTAIN.toLowerCase();
+      let message;
+      if (isHighestCorrect && isLowestCorrect) {
+        message = "Both answers are correct!";
+      } else if (isHighestCorrect) {
+        message = "The highest point answer is correct, but the lowest point answer is incorrect.";
+      } else if (isLowestCorrect) {
+        message = "The lowest point answer is correct, but the highest point answer is incorrect.";
+      } else {
+        message = "Both answers are incorrect.";
+      }
+      const popup = UiUtil.createResultPopup(
+        message,
+        "Continue",
+        () => document.location.href = "../index.html"
+      );
+      document.body.appendChild(popup);
+    }
+  };
+  __publicField(_MountainGame, "HIGHEST_MOUNTAIN", "Mount Herman");
+  __publicField(_MountainGame, "LOWEST_MOUNTAIN", "Lake Tiberias");
+  var MountainGame = _MountainGame;
   return __toCommonJS(index_exports);
 })();
 //# sourceMappingURL=bundle.js.map

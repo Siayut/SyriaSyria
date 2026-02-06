@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="manifest" href="../manifest.json">
+    <script src="../dist/bundle.js" defer></script>
+    <script>
+        window.onload = function() {
+            window.game = new SyriaSyria.MountainGame();
+        }
+    </script>
+</head>
+
+<body class="centered">
+    <h1 id="highSyria">what is the highest point in Syria?</h1>
+    <h1 id="lowSyria">what is the lowest point in Syria?</h1>
+    <input type="text" id="highest-input" placeholder="type your answer here">
+    <input type="text" id="lowest-input" placeholder="type your answer here">
+    <button onclick="game.onSubmit()">submit</button>
+</body>
+
+</html>

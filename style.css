@@ -114,3 +114,27 @@ button {
     top: -13px;
     left: 200px;
 }
+
+#highest-input {
+    position: relative;
+    top: 18px;
+    left: -360px;
+}
+
+#lowest-input {
+    position: relative;
+    top: -13px;
+    left: 368px;
+}
+
+#highSyria {
+    position: relative;
+    top: 73px;
+    left: -333px;
+}
+
+#lowSyria {
+    position: relative;
+    top: -14px;
+    left: 351px;
+}
