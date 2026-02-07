@@ -138,3 +138,7 @@ button {
     top: -14px;
     left: 351px;
 }
+
+#continentQuestion {
+    text-align: center;
+}

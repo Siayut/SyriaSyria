@@ -24,6 +24,7 @@ var SyriaSyria = (() => {
   __export(index_exports, {
     BorderingGame: () => BorderingGame,
     CapitalGame: () => CapitalGame,
+    ContinentGame: () => ContinentGame,
     MountainGame: () => MountainGame
   });
 
@@ -184,6 +185,26 @@ var SyriaSyria = (() => {
   __publicField(_MountainGame, "HIGHEST_MOUNTAIN", "Mount Herman");
   __publicField(_MountainGame, "LOWEST_MOUNTAIN", "Lake Tiberias");
   var MountainGame = _MountainGame;
+
+  // games/continentGame.ts
+  var _ContinentGame = class _ContinentGame {
+    onClick(answer) {
+      let message;
+      if (answer === _ContinentGame.CORRECT_ANSWER) {
+        message = "Correct!";
+      } else {
+        message = "Incorrect!";
+      }
+      const popup = UiUtil.createResultPopup(
+        message,
+        "Continue",
+        () => document.location.href = "../index.html"
+      );
+      document.body.appendChild(popup);
+    }
+  };
+  __publicField(_ContinentGame, "CORRECT_ANSWER", "asia");
+  var ContinentGame = _ContinentGame;
   return __toCommonJS(index_exports);
 })();
 //# sourceMappingURL=bundle.js.map
